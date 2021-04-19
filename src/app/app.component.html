@@ -17,4 +17,18 @@
       </app-server-element>
     </div>
   </div>
+
+  <hr>
+
+  <app-game-control (tickingNumber)="onNumberChange($event)"></app-game-control>
+  <div class="row" *ngFor="let number of numbers">
+    <div class="col-xs-12">
+      <app-odd *ngIf="number % 2 > 0">
+          <strong #content>Odd - {{number}}</strong>
+      </app-odd>
+      <app-even *ngIf="number % 2 == 0">
+          <strong #content>Even - {{number}}</strong>
+      </app-even>
+    </div>
+  </div>
 </div>

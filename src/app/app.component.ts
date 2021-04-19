@@ -27,4 +27,9 @@ export class AppComponent {
   onDestroyFirst() {
     this.serverElements.splice(0, 1)
   }
+
+  numbers: number[] = [];
+  onNumberChange(number: number) {
+    this.numbers.push(number)
+  }
 }
